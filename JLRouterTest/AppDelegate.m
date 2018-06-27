@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <JLRoutes.h>
+#import "RoutersManager.h"
 
 @interface AppDelegate ()
 
@@ -16,10 +18,45 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[RoutersManager alloc] init];
     return YES;
 }
 
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    NSLog(@"openUrl:%@",options[UIApplicationOpenURLOptionsAnnotationKey]);
+    NSString *scheme = url.scheme;
+    NSDictionary *appInfo = [NSBundle mainBundle].infoDictionary;
+    if ([scheme isEqualToString:appInfo[@"CFBundleIdentifier"] ]) {
+        // App内部页面跳转
+        return [JLRoutes routeURL:url withParameters:options];
+    }
+    
+    return YES;
+}
+
+/////////////////////////////////////////////////
+//获取当前Controller
+- (UIViewController *)currentViewController {
+    UIViewController *resultVC;
+    resultVC = [self _topViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
+    while (resultVC.presentedViewController) {
+        resultVC = [self _topViewController:resultVC.presentedViewController];
+    }
+    return resultVC;
+}
+
+- (UIViewController *)_topViewController:(UIViewController *)vc {
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        return [self _topViewController:[(UINavigationController *)vc topViewController]];
+    } else if ([vc isKindOfClass:[UITabBarController class]]) {
+        return [self _topViewController:[(UITabBarController *)vc selectedViewController]];
+    } else {
+        return vc;
+    }
+    return nil;
+}
+/////////////////////////////////////////////////
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

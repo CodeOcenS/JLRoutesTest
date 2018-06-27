@@ -13,6 +13,11 @@
 		187BA52320DCA21800707EC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187BA52220DCA21800707EC7 /* Assets.xcassets */; };
 		187BA52620DCA21800707EC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187BA52420DCA21800707EC7 /* LaunchScreen.storyboard */; };
 		187BA52920DCA21800707EC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BA52820DCA21800707EC7 /* main.m */; };
+		187BA53220DCA86800707EC7 /* SecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BA53020DCA86800707EC7 /* SecondController.m */; };
+		187BA53320DCA86800707EC7 /* SecondController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187BA53120DCA86800707EC7 /* SecondController.xib */; };
+		18A146D320E2326100DBD9B5 /* ThirdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A146D220E2326100DBD9B5 /* ThirdController.m */; };
+		18F4A20B20E0BE8800C34FFB /* RoutersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F4A20A20E0BE8800C34FFB /* RoutersManager.m */; };
+		F782DF6FC44C20045CA44F72 /* libPods-JLRouterTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBCA9CEEB36313770C04291 /* libPods-JLRouterTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,16 @@
 		187BA52520DCA21800707EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		187BA52720DCA21800707EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187BA52820DCA21800707EC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		187BA52F20DCA86800707EC7 /* SecondController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondController.h; sourceTree = "<group>"; };
+		187BA53020DCA86800707EC7 /* SecondController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondController.m; sourceTree = "<group>"; };
+		187BA53120DCA86800707EC7 /* SecondController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondController.xib; sourceTree = "<group>"; };
+		18A146D120E2326100DBD9B5 /* ThirdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdController.h; sourceTree = "<group>"; };
+		18A146D220E2326100DBD9B5 /* ThirdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdController.m; sourceTree = "<group>"; };
+		18F4A20920E0BE8800C34FFB /* RoutersManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoutersManager.h; sourceTree = "<group>"; };
+		18F4A20A20E0BE8800C34FFB /* RoutersManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoutersManager.m; sourceTree = "<group>"; };
+		3CBCA9CEEB36313770C04291 /* libPods-JLRouterTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JLRouterTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB11D9116D9FFB73B5C4A2C /* Pods-JLRouterTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLRouterTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLRouterTest/Pods-JLRouterTest.release.xcconfig"; sourceTree = "<group>"; };
+		DC68A65734A984BAF0E609A2 /* Pods-JLRouterTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLRouterTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLRouterTest/Pods-JLRouterTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +48,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F782DF6FC44C20045CA44F72 /* libPods-JLRouterTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ADE9E95C900D5DDA78BCC6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CBCA9CEEB36313770C04291 /* libPods-JLRouterTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		187BA50D20DCA21600707EC7 = {
 			isa = PBXGroup;
 			children = (
 				187BA51820DCA21600707EC7 /* JLRouterTest */,
 				187BA51720DCA21600707EC7 /* Products */,
+				87E3F3F6BDC33B50D15D46C7 /* Pods */,
+				0ADE9E95C900D5DDA78BCC6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +84,7 @@
 		187BA51820DCA21600707EC7 /* JLRouterTest */ = {
 			isa = PBXGroup;
 			children = (
+				18A146D420E2326700DBD9B5 /* Controllers */,
 				187BA51920DCA21600707EC7 /* AppDelegate.h */,
 				187BA51A20DCA21600707EC7 /* AppDelegate.m */,
 				187BA51C20DCA21600707EC7 /* ViewController.h */,
@@ -67,8 +94,31 @@
 				187BA52420DCA21800707EC7 /* LaunchScreen.storyboard */,
 				187BA52720DCA21800707EC7 /* Info.plist */,
 				187BA52820DCA21800707EC7 /* main.m */,
+				18F4A20920E0BE8800C34FFB /* RoutersManager.h */,
+				18F4A20A20E0BE8800C34FFB /* RoutersManager.m */,
 			);
 			path = JLRouterTest;
+			sourceTree = "<group>";
+		};
+		18A146D420E2326700DBD9B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18A146D120E2326100DBD9B5 /* ThirdController.h */,
+				18A146D220E2326100DBD9B5 /* ThirdController.m */,
+				187BA52F20DCA86800707EC7 /* SecondController.h */,
+				187BA53020DCA86800707EC7 /* SecondController.m */,
+				187BA53120DCA86800707EC7 /* SecondController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		87E3F3F6BDC33B50D15D46C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC68A65734A984BAF0E609A2 /* Pods-JLRouterTest.debug.xcconfig */,
+				5DB11D9116D9FFB73B5C4A2C /* Pods-JLRouterTest.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +128,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 187BA52C20DCA21800707EC7 /* Build configuration list for PBXNativeTarget "JLRouterTest" */;
 			buildPhases = (
+				2BA9F2E18F1ACC35D1B01826 /* [CP] Check Pods Manifest.lock */,
 				187BA51220DCA21600707EC7 /* Sources */,
 				187BA51320DCA21600707EC7 /* Frameworks */,
 				187BA51420DCA21600707EC7 /* Resources */,
@@ -129,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				187BA52620DCA21800707EC7 /* LaunchScreen.storyboard in Resources */,
+				187BA53320DCA86800707EC7 /* SecondController.xib in Resources */,
 				187BA52320DCA21800707EC7 /* Assets.xcassets in Resources */,
 				187BA52120DCA21600707EC7 /* Main.storyboard in Resources */,
 			);
@@ -136,12 +188,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BA9F2E18F1ACC35D1B01826 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JLRouterTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		187BA51220DCA21600707EC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F4A20B20E0BE8800C34FFB /* RoutersManager.m in Sources */,
+				18A146D320E2326100DBD9B5 /* ThirdController.m in Sources */,
 				187BA51E20DCA21600707EC7 /* ViewController.m in Sources */,
+				187BA53220DCA86800707EC7 /* SecondController.m in Sources */,
 				187BA52920DCA21800707EC7 /* main.m in Sources */,
 				187BA51B20DCA21600707EC7 /* AppDelegate.m in Sources */,
 			);
@@ -281,6 +357,7 @@
 		};
 		187BA52D20DCA21800707EC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC68A65734A984BAF0E609A2 /* Pods-JLRouterTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +375,7 @@
 		};
 		187BA52E20DCA21800707EC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DB11D9116D9FFB73B5C4A2C /* Pods-JLRouterTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
